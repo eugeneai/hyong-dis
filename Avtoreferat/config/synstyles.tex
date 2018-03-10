@@ -26,3 +26,13 @@
 \definecolor{linkcolor}{rgb}{0,0,0}
 \newtheorem{theorem}{Теорема}%[section]
 \newtheorem{example}{Пример}[section]
+
+\setstackgap{L}{.5\baselineskip}
+\newcommand\MA[2]{{\sffamily\color{red}\hsmash{$\uparrow$}%
+  \smash{\toplap{#1}{\scriptsize\bfseries #2}}}}
+\newcommand\MB[2]{{\sffamily\color{red}\hsmash{$\downarrow$}%
+    \smash{\bottomlap{#1}{\scriptsize\bfseries#2}}}}
+
+\newcommand*{\HL}[1]{%
+\tikz[baseline]\node[rectangle, fill=yellow, rounded corners, inner sep=0.3mm,anchor=base]{#1};%
+}
