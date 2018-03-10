@@ -1,5 +1,13 @@
-all:
-	latexmk -pdf -pdflatex="xelatex %O %S" synopsis
+.PHONY: all clean
+
+LATEX=lualatex
+# LATEX=xelatex
+
+TARGET=synopsis
+
+all: $(TARGET)
+	latexmk -pdf -pdflatex="$(LATEX) -shell-escape --synctex=1 %O %S" $<
+
 clean:
-	latexmk -C synopsis
-	rm -f synopsis.bbl
+	latexmk -C $(TARGET)
+	rm -f $(TARGET).bbl
