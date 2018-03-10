@@ -1,0 +1,24 @@
+\documentclass[a4paper,14pt]{extarticle} %,twoside
+
+\input{config/setup}               % Упрощённые настройки шаблона 
+\input{../common/datacp1251}      % Основные сведения
+\input{../common/packages}  % Пакеты общие для диссертации и автореферата
+\input{config/synpackages}         % Пакеты для автореферата
+\input{config/userpackages}        % Пакеты для специфических пользовательских задач
+\input{../common/styles}    % Стили общие для диссертации и автореферата
+\input{config/synstyles}           % Стили для автореферата
+\input{config/userstyles}          % Стили для специфических пользовательских задач
+\input{../biblio/bibliopreamble}% Настройки библиографии из внешнего файла (там же выбор: встроенная или на основе biblatex)
+\usepackage[multiple]{footmisc}
+\usepackage[]{algorithm2e}
+%\geometry{a4paper,top=2cm,bottom=2cm,left=2.5cm,right=1cm}
+\SetKwInput{KwData}{Исходные данные}
+\SetKwInput{KwResult}{Результат}
+\SetAlgorithmName{Алгоритм}{алгоритм}{список алгоритм}
+\begin{document}
+
+\input{config/title}           % Титульный лист
+
+\input{text/content}         % Содержание автореферата
+
+\end{document}
