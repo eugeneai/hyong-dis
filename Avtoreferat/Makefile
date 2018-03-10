@@ -5,7 +5,7 @@ LATEX=lualatex
 
 TARGET=synopsis
 
-all: $(TARGET)
+all: $(TARGET).tex
 	latexmk -pdf -pdflatex="$(LATEX) -shell-escape --synctex=1 %O %S" $<
 
 clean:
